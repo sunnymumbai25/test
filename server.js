@@ -4,6 +4,9 @@ const bodyParser = require('body-parser');
 const passport = require('passport');
 var GoogleStrategy = require('passport-google-oauth20').Strategy;
 
+var findOrCreate = require('mongoose-findorcreate')
+
+const User = require('./models/User');
 const users = require('./routes/api/users');
 
 const app = express();// Body parser middleware
@@ -37,32 +40,33 @@ passport.use(new GoogleStrategy({
   callbackURL: "http://localhost:3000/auth/google/callback"
 },
 function(accessToken, refreshToken, profile, cb) {
-  User.findOrCreate({ googleId: profile.id }, function (err, user) {
-    return cb(err, user);
-  });
+
+  User.findOne({ googleId: profile.id }).then(user => { 
+    if (user) {
+    
+  } else {
+    const newUser = new User({ googleId: profile.id, accessToken: accessToken });
+         newUser.save().then((user) => {
+          console.log({ user });
+          done(null, user); //callback to let passport know that we are done processing
+        });
+  }
+});
+  
 }
 ));
 
-app.get('/auth/google',
-  passport.authenticate('google', { scope: ['profile'] }));
+app.get('/auth/google',passport.authenticate('google', { scope: ['profile'] }));
 
-app.get('/auth/google/callback', 
-  passport.authenticate('google', { failureRedirect: '/login' }),
+app.get('/auth/google/callback', passport.authenticate('google'),
   function(req, res) {
     // Successful authentication, redirect home.
-    res.redirect('/');
-  });
-  passport.serializeUser(function(user, cb) {
-    cb(null, user);
-  });
-  
-  passport.deserializeUser(function(obj, cb) {
-    cb(null, obj);
+    res.redirect('/api/users');
   });
 
 
 // Use Routes
-app.use('/test', users);
+app.use('/auth/google/callback', users);
 app.use('/api/users', users);
 
 const port = process.env.PORT || 3000;

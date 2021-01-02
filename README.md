@@ -1,3 +1,4 @@
+"# test" 
 Required Node, NPM and Mongo Db.
 Run command in terminal in root path: npm install
 Run command in terminal in root path after finish installtion : npm run server 

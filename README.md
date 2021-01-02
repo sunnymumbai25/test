@@ -1,20 +1,19 @@
-"# test" 
-" Required Node, NPM and Mongo Db." 
-" Run command in terminal in root path: npm install" 
-" Run command in terminal in root path after finish installtion : npm run server " 
+## Required Node, NPM and Mongo Db
+## Run command in terminal in root path: npm install" 
+## Run command in terminal in root path after finish installtion : npm run server " 
 
-API share on postman:https://www.getpostman.com/collections/b6392e07a6a10711b56e
+## API share on postman:https://www.getpostman.com/collections/b6392e07a6a10711b56e
 /*****************************************************************************************************/
-API URL : localhost:3000/api/users/register 
-Method:Post
-Body : 
-{
+## API URL : localhost:3000/api/users/register 
+## Method:Post
+## Body : 
+``{
     "name":"santosh",
     "email":"santosh@gasd.com",
     "password":"abcdef"
-} 
+} ``
 Response:
-{
+``{
     "_id": "5ff04500b9c0dd0b549232a9",
     "name": "santosh",
     "email": "santosh@gasd.com",
@@ -22,7 +21,7 @@ Response:
     "password": "$2a$10$os4C.rhoS7kaZv1DseaIU.9XAepOFSwrBETHd/SYhggEhYyTZqV8y",
     "date": "2021-01-02T10:03:44.230Z",
     "__v": 0
-}
+}``
 /*****************************************************************************************************/
 API URL : localhost:3000/api/users/login 
 Method:Post

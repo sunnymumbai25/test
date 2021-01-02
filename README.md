@@ -2,8 +2,9 @@
 ### Run command in terminal in root path: npm install" 
 ### Run command in terminal in root path after finish installtion : npm run server " 
 
-##### API share on postman:https://www.getpostman.com/collections/b6392e07a6a10711b56e
+
 /*****************************************************************************************************/
+##### API share on postman:https://www.getpostman.com/collections/b6392e07a6a10711b56e
 ###### API URL : localhost:3000/api/users/register 
 ###### Method:Post
 ###### Body : 
@@ -27,6 +28,7 @@
 
 
 
+/*****************************************************************************************************/
 ##### API URL : localhost:3000/api/users/login 
 ###### Method:Post
 ###### Body : 
@@ -43,10 +45,11 @@
 
 
 
+/*****************************************************************************************************/
 ##### API URL : localhost:3000/api/users/current
 ###### Method:GET
-###### Authorization:
-###### Bearer Token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmZjA0NTAwYjljMGRkMGI1NDkyMzJhOSIsIm5hbWUiOiJzYW50b3NoIiwiYXZhdGFyIjoiLy93d3cuZ3JhdmF0YXIuY29tL2F2YXRhci80NTVmOGRkMTc3ZmMwN2JlYmM2OTkwMmJjYTAxMmM5ZD9zPTIwMCZyPXBnJmQ9bW0iLCJpYXQiOjE2MDk1ODIwMzMsImV4cCI6MTYwOTU4NTYzM30.ms8I7OdOoQJltzet1l4EJdH6Ot24RT9WXVO728OFBos
+###### Authorization Type:
+###### Bearer Token:``eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmZjA0NTAwYjljMGRkMGI1NDkyMzJhOSIsIm5hbWUiOiJzYW50b3NoIiwiYXZhdGFyIjoiLy93d3cuZ3JhdmF0YXIuY29tL2F2YXRhci80NTVmOGRkMTc3ZmMwN2JlYmM2OTkwMmJjYTAxMmM5ZD9zPTIwMCZyPXBnJmQ9bW0iLCJpYXQiOjE2MDk1ODIwMzMsImV4cCI6MTYwOTU4NTYzM30.ms8I7OdOoQJltzet1l4EJdH6Ot24RT9WXVO728OFBos``
 
 ###### Response:
 ``{

@@ -1,7 +1,7 @@
 "# test" 
-Required Node, NPM and Mongo Db.
-Run command in terminal in root path: npm install
-Run command in terminal in root path after finish installtion : npm run server 
+" Required Node, NPM and Mongo Db." 
+" Run command in terminal in root path: npm install" 
+" Run command in terminal in root path after finish installtion : npm run server " 
 
 API share on postman:https://www.getpostman.com/collections/b6392e07a6a10711b56e
 /*****************************************************************************************************/
